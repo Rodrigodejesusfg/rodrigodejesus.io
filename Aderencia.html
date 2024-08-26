@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aderência do Projeto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #f0f4f8;
+        }
+        .header {
+            background-image: url('https://img.freepik.com/fotos-premium/ponto-artistico-abstrato-com-fundo-aquarela-azul-escuro-e-varios-tons-de-azul_908985-68003.jpg');
+            background-size: cover;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header h1 {
+            color: white;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .card h2 {
+            color: #3474b4;
+            margin-top: 0;
+        }
+        .score {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3474b4;
+        }
+        #pontuacaoChart, #pipelineChart {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Aderência do Projeto</h1>
+    </div>
+    <div class="content">
+        <div class="dashboard">
+            <div class="card">
+                <h2>Pontuação Total</h2>
+                <div class="score">42/50</div>
+                <canvas id="pontuacaoChart"></canvas>
+            </div>
+            <div class="card">
+                <h2>Detalhes do Projeto</h2>
+                <p><strong>Localização:</strong> Pará</p>
+                <p><strong>Valor Financeiro:</strong> R$ 120 milhões</p>
+                <p><strong>Volume de Projetos:</strong> 7/10</p>
+                <p><strong>Relacionamento com a Empresa:</strong> 8/10</p>
+            </div>
+            <div class="card">
+                <h2>Pipeline de Projetos</h2>
+                <canvas id="pipelineChart"></canvas>
+            </div>
+            <div class="card">
+                <h2>Projetos Similares</h2>
+                <ul>
+                    <li>Projeto A - R$ 95 milhões</li>
+                    <li>Projeto B - R$ 110 milhões</li>
+                    <li>Projeto C - R$ 105 milhões</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Gráfico de Pontuação
+        var ctx = document.getElementById('pontuacaoChart').getContext('2d');
+        var pontuacaoChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Pontuação', 'Restante'],
+                datasets: [{
+                    data: [42, 8],
+                    backgroundColor: ['#3474b4', '#e0e0e0']
+                }]
+            },
+            options: {
+                responsive: true,
+                cutout: '70%',
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Gráfico de Pipeline
+        var ctx2 = document.getElementById('pipelineChart').getContext('2d');
+        var pipelineChart = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                datasets: [{
+                    label: 'Projetos no Pipeline',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: '#3474b4'
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

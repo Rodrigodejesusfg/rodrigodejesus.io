@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copiloto Comercial - Assistente de IA para Análises Avançadas</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap');
+
+        :root {
+            --primary-color: #294E88;
+            --text-color: #333;
+            --bg-color: #F8F9FA;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            font-weight: 300;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #1e3a66;
+        }
+
+        .hero {
+            padding: 120px 0 60px;
+            text-align: center;
+            background-image: url('https://img.freepik.com/fotos-premium/ponto-artistico-abstrato-com-fundo-aquarela-azul-escuro-e-varios-tons-de-azul_908985-68003.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 400;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #1e3a66;
+        }
+
+        .features {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 60px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            text-align: left;
+            padding: 20px;
+        }
+
+        .feature-item h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="C:\Users\070283\Downloads\Logo - fundo transparente - preto.png" alt="Copiloto Comercial Logo">
+                </div>
+                <div class="nav-links">
+                    <a href="#sobre">Sobre</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Funcionalidades</button>
+                        <div class="dropdown-content">
+                            <a href="resumo.html">Resumo</a>
+                            <a href="análise de empresa.html">Análise de Empresa</a>
+                            <a href="Aderencia.html">Aderência</a>
+                        </div>
+                    </div>
+                    <a href="#contato">Contato</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Copiloto Comercial</h1>
+                <p>Assistente de IA para análises avançadas em tempo real. Automatize suas análises de documentos e aumente sua produtividade com nossa solução baseada em inteligência artificial.</p>
+                <a href="#" class="cta-button">Saiba Mais</a>
+            </div>
+        </section>
+
+        <section class="features" id="funcionalidades">
+            <div class="container">
+                <h2>Funcionalidades Principais</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h3>Análise de Documentos</h3>
+                        <p>Extração automática de informações-chave de documentos complexos, permitindo uma revisão rápida e precisa.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Inteligência Artificial Avançada</h3>
+                        <p>Alimentado por bases de conhecimento e algoritmos de IA de ponta para fornecer insights valiosos e precisos.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Análises em Tempo Real</h3>
+                        <p>Obtenha insights instantâneos para tomada de decisões rápidas e informadas em ambientes comerciais dinâmicos.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Automação de Processos</h3>
+                        <p>Aumente a eficiência operacional automatizando tarefas repetitivas e complexas de análise documental.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Copiloto Comercial. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
